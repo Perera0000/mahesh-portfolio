@@ -85,9 +85,9 @@ export const portfolioData = {
     },
     metrics: [
       { label: "Completed Projects", value: "10+" },
-      { label: "Credentials Earned", value: "8" },
+      { label: "Industry Credentials", value: "8" },
       { label: "Hackathon Podiums", value: "Top 7" },
-      { label: "Git Contributions", value: "540+" }
+      { label: "Git Contributions", value: "340+" }
     ]
   },
 

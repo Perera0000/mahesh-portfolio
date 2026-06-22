@@ -54,12 +54,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
   background: #1E293B;
   border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -97,12 +101,10 @@ body {
 
 /* Subtle animation helpers */
 @keyframes pulseGlow {
-
   0%,
   100% {
     opacity: 0.15;
   }
-
   50% {
     opacity: 0.3;
   }
@@ -110,4 +112,62 @@ body {
 
 .animate-pulse-glow {
   animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* ── Light Mode: Fix hardcoded text-white classes ── */
+[data-theme="light"] .text-white\/90,
+[data-theme="light"] .text-white\/80,
+[data-theme="light"] .text-white {
+  color: #0F172A !important;
+}
+
+/* Metric card values, terminal, typewriter text in light mode */
+[data-theme="light"] .font-display.font-bold.text-white,
+[data-theme="light"] .font-mono {
+  color: #1E293B;
+}
+
+/* glass-panel light mode */
+[data-theme="light"] .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  color: var(--text-primary);
+}
+
+/* Hero grid lines — lighter in light mode */
+[data-theme="light"] [style*="rgba(59,130,246,0.065)"] {
+  opacity: 0.4;
+}
+
+/* Stat cards text fix in light */
+[data-theme="light"] .text-3xl.font-display.font-bold {
+  color: #0F172A;
+}
+
+/* Section headings that use text-white */
+[data-theme="light"] h3.text-white,
+[data-theme="light"] h4.text-white,
+[data-theme="light"] h2.text-white {
+  color: #0F172A !important;
+}
+
+/* Terminal console light mode */
+[data-theme="light"] .font-mono.text-green-400 {
+  color: #15803d;
+}
+[data-theme="light"] .font-mono.text-blue-400 {
+  color: #1d4ed8;
+}
+[data-theme="light"] .font-mono.text-yellow-400 {
+  color: #b45309;
+}
+
+/* Footer border in light */
+[data-theme="light"] footer {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Nav border light */
+[data-theme="light"] nav {
+  border-color: rgba(0, 0, 0, 0.07);
 }

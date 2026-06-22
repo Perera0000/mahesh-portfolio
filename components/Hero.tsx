@@ -58,7 +58,7 @@ const PARTICLES = [
 ];
 
 export default function Hero() {
-  const { name, title, bio, github, linkedin, resumeUrl, metrics } =
+  const { name, title, bio, github, linkedin, facebook, medium, resumeUrl, metrics } =
     portfolioData.personalInfo;
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -401,10 +401,34 @@ export default function Hero() {
                 href={linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-surface hover:bg-[#1f293d] border border-border hover:border-text-secondary text-text-secondary hover:text-white p-3.5 rounded-xl transition-all duration-300"
+                className="bg-surface hover:bg-[#1f293d] border border-border hover:border-primary/40 text-text-secondary hover:text-[#0A66C2] p-3.5 rounded-xl transition-all duration-300"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href={facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-surface hover:bg-[#1f293d] border border-border hover:border-blue-500/40 text-text-secondary hover:text-[#1877F2] p-3.5 rounded-xl transition-all duration-300"
+                aria-label="Facebook Profile"
+              >
+                {/* Facebook icon */}
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a
+                href={medium}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-surface hover:bg-[#1f293d] border border-border hover:border-white/30 text-text-secondary hover:text-white p-3.5 rounded-xl transition-all duration-300"
+                aria-label="Medium Blog"
+              >
+                {/* Medium icon */}
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                </svg>
               </a>
             </div>
           </motion.div>

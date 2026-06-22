@@ -86,7 +86,7 @@ export default function GithubStats() {
               <div className="flex justify-between items-center flex-wrap gap-2">
                 <div className="space-y-1">
                   <h4 className="text-sm font-semibold text-white">GitHub Contribution Graph</h4>
-                  <p className="text-xs text-text-secondary font-light">547 contributions in the past year</p>
+                  <p className="text-xs text-text-secondary font-light">340+ contributions in the past year</p>
                 </div>
                 {/* Legend */}
                 <div className="flex items-center gap-1.5 text-[10px] text-text-secondary">
